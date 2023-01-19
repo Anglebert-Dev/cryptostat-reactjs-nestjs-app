@@ -1,6 +1,4 @@
-import React from 'react';
 import './index.css'
-import { LoginForm } from './components/auth/login-form/login-form.component';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Routes } from './routes/routes';
 

@@ -1,8 +1,8 @@
 import { UsersService } from './users.service';
 import { Controller, Post } from '@nestjs/common';
 import { Body } from '@nestjs/common/decorators';
-import { CreateUserRequest } from './dto/request/create-user-request.dtp';
 import { UserResponse } from './dto/response/user-response.dto';
+import { CreateUserRequest } from './dto/request/create-user-request.dto';
 
 @Controller('users')
 export class UsersController {

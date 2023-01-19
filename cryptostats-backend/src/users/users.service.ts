@@ -1,9 +1,9 @@
 import { UsersRepository } from './users.repository';
-import { CreateUserRequest } from './dto/request/create-user-request.dtp';
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { hash } from 'bcrypt';
 import { UserResponse } from './dto/response/user-response.dto';
 import { User } from './models/User';
+import { CreateUserRequest } from './dto/request/create-user-request.dto';
 
 @Injectable()
 export class UsersService {
@@ -17,7 +17,7 @@ export class UsersService {
       password: await hash(createUserRequest.password, 10),
     });
     return this.buildResponse(user);
-  }
+  } 
 
   // check if email already exist
   private async validateCreateUserRequest(
